@@ -1,0 +1,20 @@
+* Combine the test suite into a single executable and then do:
+    $> darcs setpref test "runhaskell Tests.hs"
+
+* Also, tell Setup.hs so that `cabal test` and `runhaskell Setup.hs
+  test` call the test suite.
+
+* Try to get the newest/final version of this package folded into "stm".
+
+* Possibly incorporate more things from http://hackage.haskell.org/package/bounded-tchan
+
+    For example, On 4/3/11 11:58 PM, Thomas DuBuisson wrote:
+    > 3) Implement a "sizeOfTBChan". This would require an extra
+    > word to store the max size in addition to the counter (vs
+    > what you have of a single counter counting down from the
+    > maximum toward zero), but the use of {-# UNPACK #-} should
+    > keep it to a single extra word.
+    
+
+-- <http://hackage.haskell.org/trac/ghc/ticket/5104>
+-- <http://www.haskell.org/pipermail/cvs-libraries/2011-April/012914.html>
